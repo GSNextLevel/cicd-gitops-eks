@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:1.14.2
+        image: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-front:d0c01892d384200ba648957ca579331499ff8a0a
         ports:
         - containerPort: 80
         
