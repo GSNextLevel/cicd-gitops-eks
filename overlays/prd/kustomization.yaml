@@ -1,11 +1,5 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-# - name: /backend-emp
-#   newName: /backend-emp
-#   newTag: 2e48493ccdf1b04c84c93a5fc94c24151df0e2ef
-# - name: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/backend-emp
-#   newName: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/backend-emp
-#   newTag: acfa731786ceaa58d8220b130fce6477a99f1ccb
 images:
 - name: /
   newName: /
