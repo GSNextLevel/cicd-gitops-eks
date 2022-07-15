@@ -3,8 +3,8 @@ kind: Kustomization
 images:
 - name: /
   newName: /
-- name: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-front
-  newName: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-front
+- name: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-back
+  newName: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-back
   newTag: 64bb784b2296a72e7a59a49caa2d7d997f149105
 resources:
 - ../../resources
