@@ -6,8 +6,8 @@ metadata:
   labels:
     app: exb-back
 spec:
-  revisionHistoryLimit: 3
-  replicas: 3
+  revisionHistoryLimit: 2
+  replicas: 1
   selector:
     matchLabels:
       app: exb-back
