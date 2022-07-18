@@ -21,6 +21,7 @@ spec:
     - http:
         paths:
           - path: /api/*
+            pathType: Prefix
             backend:
               service:
                 name: exb-back-svc
@@ -29,6 +30,7 @@ spec:
     - http:
         paths:
           - path: /*
+            pathType: Prefix
             backend:
               service:
                 name: exb-front-svc
