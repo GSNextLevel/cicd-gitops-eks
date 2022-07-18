@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
-  namespace: cicd
+  name: front-deployment
+  namespace: exb
   labels:
-    app: nginx
+    app: examboom
 spec:
   revisionHistoryLimit: 3
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: examboom
   template:
     metadata:
       labels:
-        app: nginx
+        app: examboom
     spec:
       containers:
-      - name: nginx
+      - name: exb-front
         image: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-front:d0c01892d384200ba648957ca579331499ff8a0a
         ports:
         - containerPort: 80
