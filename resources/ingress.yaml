@@ -2,10 +2,10 @@ apiVersion: extensions/v1beta1
 # apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: exb-ingress
+  name: exb-ingress2
   namespace: exb
   labels:
-    app.kubernetes.io/name: "exb-ingress"
+    app.kubernetes.io/name: "exb-ingress2"
   annotations:
     # alb.ingress.kubernetes.io/scheme: internet-facing
     
