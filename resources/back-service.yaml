@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: exb-back-sbc
+  name: exb-back-svc
   namespace: exb
 spec:
   type: ClusterIP
