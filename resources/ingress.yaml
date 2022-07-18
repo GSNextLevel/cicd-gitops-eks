@@ -22,12 +22,16 @@ spec:
         paths:
           - path: /api/*
             backend:
-              serviceName: exb-back-svc
-              servicePort: 80
+              service:
+                name: exb-back-svc
+                port:
+                  number: 80
     - http:
         paths:
           - path: /*
             backend:
-              serviceName: exb-front-svc
-              servicePort: 80  
+              service:
+                name: exb-front-svc
+                port:
+                  number: 80
     
