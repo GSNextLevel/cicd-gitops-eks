@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: exb-front-sbc
+  namespace: exb
+spec:
+  type: ClusterIP
+  selector:
+    app: exb-front
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8090

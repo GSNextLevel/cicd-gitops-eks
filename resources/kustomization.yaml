@@ -1,0 +1,8 @@
+resources:
+- back-deployment.yaml
+- front-deployment.yaml
+- front-service.yaml
+- back-service.yaml
+- ingress.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization

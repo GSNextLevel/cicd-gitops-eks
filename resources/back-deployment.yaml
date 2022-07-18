@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: back-deployment
+  namespace: exb
+  labels:
+    app: exb-back
+spec:
+  revisionHistoryLimit: 2
+  replicas: 1
+  selector:
+    matchLabels:
+      app: exb-back
+  template:
+    metadata:
+      labels:
+        app: exb-back
+    spec:
+      containers:
+      - name: exb-back
+        image: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-back:d0c01892d384200ba648957ca579331499ff8a0a
+        ports:
+        - containerPort: 8090
+        
