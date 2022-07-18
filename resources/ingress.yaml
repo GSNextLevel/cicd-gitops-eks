@@ -1,9 +1,9 @@
-apiVersion: extensions/v1
+apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: aws-load-balancer-controller
+  name: "ingress"
   labels:
-    app.kubernetes.io/name: aws-load-balancer-controller
+    app.kubernetes.io/name: "ingress"
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
