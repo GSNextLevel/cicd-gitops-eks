@@ -2,19 +2,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: back-deployment
-  namespace: backend
+  namespace: exb
   labels:
-    app: exb-back
+    app: examboom
 spec:
   revisionHistoryLimit: 2
   replicas: 1
   selector:
     matchLabels:
-      app: exb-back
+      app: examboom
   template:
     metadata:
       labels:
-        app: exb-back
+        app: examboom
     spec:
       containers:
       - name: exb-api
