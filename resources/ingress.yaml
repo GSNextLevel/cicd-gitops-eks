@@ -1,5 +1,5 @@
-# apiVersion: extensions/v1beta1
-apiVersion: networking.k8s.io/v1
+apiVersion: extensions/v1beta1
+# apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: exb-ingress
@@ -7,33 +7,29 @@ metadata:
   labels:
     app.kubernetes.io/name: "exb-ingress"
   annotations:
-    alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/target-type: ip
-    # kubernetes.io/ingress.class: alb
     # alb.ingress.kubernetes.io/scheme: internet-facing
-    # # alb.ingress.kubernetes.io/subnets: subnet-03d9d743dcef08178,subnet-0ba17339cf1d99402
-    # # alb.ingress.kubernetes.io/target-type: instance
+    # alb.ingress.kubernetes.io/target-type: ip
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    # alb.ingress.kubernetes.io/subnets: subnet-03d9d743dcef08178,subnet-0ba17339cf1d99402
+    alb.ingress.kubernetes.io/target-type: instance
     # alb.ingress.kubernetes.io/target-type: ip
  
 spec:
-  ingressClassName: alb
+  # ingressClassName: alb
   rules:
     - http:
         paths:
           - path: /api/*
             pathType: Prefix
             backend:
-              service:
-                name: exb-back-svc
-                port:
-                  number: 80
+              serviceName: exb-back-svc
+              servicePort: 80
     - http:
         paths:
           - path: /*
             pathType: Prefix
             backend:
-              service:
-                name: exb-front-svc
-                port:
-                  number: 80
+              serviceName: exb-front-svc
+              servicePort: 80
     
