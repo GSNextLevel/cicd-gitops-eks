@@ -1,17 +1,22 @@
-apiVersion: extensions/v1beta1
+# apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: "exb-ingress"
+  name: exb-ingress
+  namespace: exb
   labels:
     app.kubernetes.io/name: "exb-ingress"
   annotations:
-    kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/subnets: subnet-03d9d743dcef08178,subnet-0ba17339cf1d99402
-    # alb.ingress.kubernetes.io/target-type: instance
     alb.ingress.kubernetes.io/target-type: ip
+    # kubernetes.io/ingress.class: alb
+    # alb.ingress.kubernetes.io/scheme: internet-facing
+    # # alb.ingress.kubernetes.io/subnets: subnet-03d9d743dcef08178,subnet-0ba17339cf1d99402
+    # # alb.ingress.kubernetes.io/target-type: instance
+    # alb.ingress.kubernetes.io/target-type: ip
  
 spec:
+  ingressClassName: alb
   rules:
     - http:
         paths:
