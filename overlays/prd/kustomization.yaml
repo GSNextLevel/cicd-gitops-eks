@@ -3,12 +3,12 @@ kind: Kustomization
 images:
 - name: /
   newName: /
-- name: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-front
-  newName: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-front
-  newTag: d20c4d0164be060353055db6947f2be406e99855
 - name: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-back
   newName: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-back
-  newTag: 275da8c1db06532c959a185bb729726516699edf
+  newTag: 6eee2d629e67ec52ac6407ca6e4b4a52766cc35b
+- name: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-front
+  newName: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-front
+  newTag: 0b02b3689acb4a6464e62fddcae9e5910b9f940c
 
 resources:
 - ../../resources
