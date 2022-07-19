@@ -21,3 +21,10 @@ spec:
         image: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-front:d0c01892d384200ba648957ca579331499ff8a0a
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            memory: "40Mi"
+            cpu: 200m
+          limits:
+            memory: "80Mi"
+            cpu: 600m
