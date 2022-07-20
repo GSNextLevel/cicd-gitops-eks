@@ -5,10 +5,10 @@ images:
   newName: /
 - name: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-back
   newName: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-back
-  newTag: 48082655ad635754941ab92cf9182de28d03314c
+  newTag: 1fd8909c779fdfa0f38e6d27f1996e20c1f30bf6
 - name: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-front
   newName: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-front
-  newTag: ac1adb83c5f2b1cc7ca56efdce7ba30e35c24659
+  newTag: 3b7c4e0b69456d3c2edc6d168a5d877d4912a3be
 
 resources:
 - ../../resources
