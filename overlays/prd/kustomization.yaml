@@ -8,7 +8,7 @@ images:
   newTag: 48082655ad635754941ab92cf9182de28d03314c
 - name: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-front
   newName: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-front
-  newTag: 2c84510e87236ded3d8b15b85bf2d1d9e768fb1e
+  newTag: ac1adb83c5f2b1cc7ca56efdce7ba30e35c24659
 
 resources:
 - ../../resources
