@@ -7,11 +7,11 @@ metadata:
     app: exb-back
 spec:
   revisionHistoryLimit: 2
-  replicas: 2
+  replicas: 10
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxUnavailable: 50%
+      maxUnavailable: 30%
       maxSurge: 50%
   selector:
     matchLabels:
