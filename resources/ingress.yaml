@@ -56,6 +56,13 @@ spec:
                 backend:
                   serviceName: grafana
                   servicePort: 80      
+
+    - http:
+            paths:
+              - path: /argo/*
+                backend:
+                  serviceName: argocd-server
+                  servicePort: 80
     - http:
         paths:
           - path: /*
