@@ -51,6 +51,12 @@ spec:
               serviceName: exb-back-svc
               servicePort: 80
     - http:
+            paths:
+              - path: /grafana/*
+                backend:
+                  serviceName: grafana
+                  servicePort: 80      
+    - http:
         paths:
           - path: /*
             backend:
