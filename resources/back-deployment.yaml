@@ -21,6 +21,7 @@ spec:
       labels:
         app: exb-back
     spec:
+      serviceAccountName: exb-sa
       containers:
       - name: exb-back
         image: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-back:d0c01892d384200ba648957ca579331499ff8a0a
