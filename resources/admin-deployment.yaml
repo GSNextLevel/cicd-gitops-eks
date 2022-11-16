@@ -24,7 +24,7 @@ spec:
       serviceAccountName: exb-sa
       containers:
       - name: exb-admin
-        image: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-admin:d0c01892d384200ba648957ca579331499ff8a0a
+        image: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-admin:e51a7d13a8ca4374d23c91f26dd62d6714b58abe
         ports:
         - containerPort: 8090
         resources:
