@@ -1,21 +1,18 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+
 images:
 - name: /
   newName: /
 - name: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-admin
   newName: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-admin
-  newTag: e51a7d13a8ca4374d23c91f26dd62d6714b58abe
+  newTag: 0370a2129a9b1c71ecb594442bf4526ae1a56560
 - name: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-back
   newName: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-back
   newTag: 21cc05dd766c02fb73a06102440b5b97ec7db092
 - name: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-front
   newName: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-front
   newTag: a2461445c3dea0765478039cfbf4f9905e558337
-
-- name: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-admin
-  newName: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-admin
-  newTag: e51a7d13a8ca4374d23c91f26dd62d6714b58abe
 
 resources:
 - ../../resources
