@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: admin-deployment
+  namespace: exb
+  labels:
+    app: exb-admin
+spec:
+  revisionHistoryLimit: 2
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 50%
+      maxSurge: 50%
+  selector:
+    matchLabels:
+      app: exb-admin
+  template:
+    metadata:
+      labels:
+        app: exb-admin
+    spec:
+      serviceAccountName: exb-sa
+      containers:
+      - name: exb-admin
+        image: 336481557929.dkr.ecr.ap-northeast-2.amazonaws.com/cicd-admin:d0c01892d384200ba648957ca579331499ff8a0a
+        ports:
+        - containerPort: 8090
+        resources:
+          requests:
+            memory: "20Mi"
+            cpu: 200m
+          limits:
+            memory: "40Mi"
+            cpu: 400m
+        # command: ["stress"]
+        # args: ["--vm", "1", "--vm-bytes", "60M", "--vm-hang", "1"]
+        

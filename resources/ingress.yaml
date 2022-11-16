@@ -59,6 +59,15 @@ spec:
                 name: exb-back-svc
                 port: 
                   number: 80
+    - http:
+        paths:
+          - pathType: Prefix
+            path: /api2
+            backend:
+              service:
+                name: exb-admin-svc
+                port: 
+                  number: 80
     # - http:
     #         paths:
     #           - path: /grafana/*
