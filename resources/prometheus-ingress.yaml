@@ -8,20 +8,16 @@ metadata:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/group.name: alb-02
-    # alb.ingress.kubernetes.io/subnets: subnet-03d9d743dcef08178,subnet-0609724dd9cda79f0
-    # alb.ingress.kubernetes.io/target-type: instance
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS": 3443}, {"HTTP":3000}]'
     alb.ingress.kubernetes.io/actions.ssl-redirect: '{"Type": "redirect", "RedirectConfig": { "Protocol": "HTTPS", "Port": "3443", "StatusCode": "HTTP_301"}}'
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:336481557929:certificate/74cb2bea-8540-48e8-be6d-2ec9ec7d56de
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:336481557929:certificate/fbacec26-4539-40a8-9e5a-7042b3c183b3
     alb.ingress.kubernetes.io/ssl-redirect: '443'
     alb.ingress.kubernetes.io/group.order: '1'
     alb.ingress.kubernetes.io/healthcheck-protocol: HTTPS
     alb.ingress.kubernetes.io/healthcheck-port: '3443'
-    # alb.ingress.kubernetes.io/backend-protocol: HTTPS
-    external-dns.alpha.kubernetes.io/hostname: exam.viassh.com
+    external-dns.alpha.kubernetes.io/hostname: exam.heoshicorp.com
     external-dns: public
-
 
 spec:
   rules:

@@ -7,46 +7,16 @@ metadata:
   # labels:
   #   app.kubernetes.io/name: "exb-ingress2"
   annotations:
-    # alb.ingress.kubernetes.io/scheme: internet-facing
-    
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/group.name: alb-01
-    # alb.ingress.kubernetes.io/subnets: subnet-0ec6e1005376df048,subnet-0609724dd9cda79f0
-    # alb.ingress.kubernetes.io/target-type: instance
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:336481557929:certificate/74cb2bea-8540-48e8-be6d-2ec9ec7d56de
-    # alb.ingress.kubernetes.io/ssl-redirect: '443'
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:336481557929:certificate/fbacec26-4539-40a8-9e5a-7042b3c183b3
     alb.ingress.kubernetes.io/actions.ssl-redirect: '{"Type": "redirect", "RedirectConfig": { "Protocol": "HTTPS", "Port": "443", "StatusCode": "HTTP_301"}}'
 
-    external-dns.alpha.kubernetes.io/hostname: exam.viassh.com
-    
-    external-dns: public
-
-# spec:
-#   # ingressClassName: alb
-#   rules:
-#     - http:
-#         paths:
-#           - path: /api/*
-#             pathType: Prefix
-#             backend:
-#               service:
-#                 name: exb-back-svc
-#                 port: 
-#                   number: 80
-#     - http:
-#         paths:
-#           - path: /*
-#             pathType: Prefix
-#             backend:
-#               service:
-#                 name: exb-front-svc
-#                 port: 
-#                   number: 80
-    
- 
+    external-dns.alpha.kubernetes.io/hostname: exam.heoshicorp.com
+    external-dns: public 
 spec:
   # ingressClassName: alb
   rules:
@@ -68,26 +38,12 @@ spec:
                 name: exb-admin-svc
                 port: 
                   number: 80
-    # - http:
-    #         paths:
-    #           - path: /grafana/*
-    #             backend:
-    #               serviceName: grafana
-    #               servicePort: 80      
-
-    # - http:
-    #         paths:
-    #           - path: /argo/*
-    #             backend:
-    #               serviceName: argocd-server
-    #               servicePort: 80
     - http:
         paths:
-              - pathType: Prefix
-                path: /
-                backend:
-                  service:
-                    name: exb-front-svc
-                    port: 
-                      number: 80
-    
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: exb-front-svc
+                port: 
+                  number: 80
