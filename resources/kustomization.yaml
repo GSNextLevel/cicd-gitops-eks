@@ -4,6 +4,7 @@ resources:
 - front-service.yaml
 - back-service.yaml
 - ingress.yaml
+- argo-ingress.yaml
 - admin-deployment.yaml
 - admin-service.yaml
 
