@@ -17,6 +17,7 @@ metadata:
 
     external-dns.alpha.kubernetes.io/hostname: exam.heoshicorp.com
     external-dns: public
+    external-dns.alpha.kubernetes.io/set-identifier: recordID
     external-dns.alpha.kubernetes.io/aws-weight: '1'
 spec:
   # ingressClassName: alb
